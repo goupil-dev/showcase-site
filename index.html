@@ -1,0 +1,87 @@
+<!doctype html>
+<html lang="fr">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Goupil — Freelance Dev (APIs, Automations & Bug Fixing)</title>
+  <meta name="description" content="Goupil.dev — Développeur freelance : APIs, automatisation et bug fixing. Code pragmatique, livré vite et bien." />
+  <meta property="og:title" content="Goupil.dev — Freelance Dev" />
+  <meta property="og:description" content="APIs, automatisation, bug fixing. Code pragmatique, livré vite et bien." />
+  <meta property="og:image" content="assets/logo.png" />
+  <link rel="icon" type="image/png" href="assets/favicon.png" />
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+  <div class="container">
+    <nav class="nav">
+      <div class="brand">
+        <img src="assets/logo.png" alt="Goupil — logo renard" />
+        <span class="name">goupil.dev</span>
+      </div>
+      <div class="links">
+        <a href="#services">Services</a>
+        <a href="#process">Méthode</a>
+        <a href="#contact">Contact</a>
+      </div>
+    </nav>
+
+    <section class="hero">
+      <div class="hero-card">
+        <span class="badge">Freelance • APIs • Automatisation • Bug fixing</span>
+        <h1>Code pragmatique, livré vite.<br/>Sharp as a fox 🦊</h1>
+        <p class="lead">Je conçois des <strong>APIs</strong>, j’automatise des <strong>process</strong>, et je corrige vos <strong>bugs</strong> avec une approche simple, testée et maintenable.</p>
+        <a class="cta" href="mailto:contact@goupil.dev?subject=[Goupil.dev] Demande de devis">Demander un devis</a>
+        <p style="margin-top:10px;color:#b5bdd1">Réponse sous 24h ouvrées • Paris / Remote</p>
+      </div>
+      <div class="hero-visual">
+        <img src="assets/logo.png" alt="Logo renard low-poly" />
+      </div>
+    </section>
+
+    <section id="services" class="section">
+      <h2>Services</h2>
+      <div class="cards">
+        <div class="card">
+          <h3>Bug fixing rapide</h3>
+          <p>Audit ciblé, reproduction, correctif et explication — pour repartir proprement. Stack : Java, JS/TS, APIs REST.</p>
+        </div>
+        <div class="card">
+          <h3>Automatisation & scripts</h3>
+          <p>Traitement de fichiers (CSV/Excel), intégrations API, scraping légal, tâches CRON. Livré documenté + exemples.</p>
+        </div>
+        <div class="card">
+          <h3>Mini APIs & intégrations</h3>
+          <p>Conception de micro‑services et intégrations (Stripe, Mail, Maps…). Tests inclus, déploiement guidé.</p>
+        </div>
+      </div>
+    </section>
+
+    <section id="process" class="section">
+      <h2>Méthode</h2>
+      <div class="card">
+        <p>Brief → chiffrage simple → itérations courtes → livrable testé → récap clair.</p>
+        <blockquote>“Pas de blabla : des specs concrètes, des tests, et un code que vous pouvez reprendre.”</blockquote>
+      </div>
+    </section>
+
+    <section id="contact" class="section">
+      <h2>Contact</h2>
+      <div class="card">
+        <p>Un besoin ? Écrivez-moi : <a href="mailto:contact@goupil.dev">contact@goupil.dev</a></p>
+        <p>GitHub : <a href="https://github.com/goupil-dev" target="_blank" rel="noopener">github.com/goupil-dev</a></p>
+      </div>
+    </section>
+
+    <footer class="footer">
+      <div class="left">
+        <img src="assets/favicon.png" alt="Goupil icône" />
+        <span>© <span id="yr"></span> goupil.dev — Paris • Remote</span>
+      </div>
+      <div>
+        <a href="mailto:contact@goupil.dev" class="cta" style="padding:8px 12px;">Me contacter</a>
+      </div>
+    </footer>
+  </div>
+  <script>document.getElementById('yr').textContent = new Date().getFullYear();</script>
+</body>
+</html>
