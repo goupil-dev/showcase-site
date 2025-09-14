@@ -1,40 +1,44 @@
 <!doctype html>
-<html lang="fr">
+<html lang="en">
 <head>
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>Goupil — Freelance Dev (APIs, Automations & Bug Fixing)</title>
-  <meta name="description" content="Goupil.dev — Développeur freelance : APIs, automatisation et bug fixing. Code pragmatique, livré vite et bien." />
+  <title>Goupil — Freelance Dev (APIs, Automation & Bug Fixing)</title>
+  <meta name="description" content="Goupil.dev — Freelance developer: APIs, automation and bug fixing. Pragmatic code, shipped fast and clean." />
   <meta property="og:title" content="Goupil.dev — Freelance Dev" />
-  <meta property="og:description" content="APIs, automatisation, bug fixing. Code pragmatique, livré vite et bien." />
+  <meta property="og:description" content="APIs, automation, bug fixing. Pragmatic code, shipped fast and clean." />
   <meta property="og:image" content="assets/logo.png" />
   <link rel="icon" type="image/png" href="assets/favicon.png" />
   <link rel="stylesheet" href="styles.css" />
 </head>
 <body>
   <div class="container">
-    <nav class="nav">
+    <nav class="nav" role="navigation" aria-label="Main">
       <div class="brand">
-        <img src="assets/logo.png" alt="Goupil — logo renard" />
+        <img src="assets/logo_compressed.png" alt="Goupil — fox logo" />
         <span class="name">goupil.dev</span>
       </div>
       <div class="links">
         <a href="#services">Services</a>
-        <a href="#process">Méthode</a>
+        <a href="#process">Process</a>
         <a href="#contact">Contact</a>
       </div>
     </nav>
 
     <section class="hero">
+      <div class="canvas-wrap">
+        <canvas id="fx" width="1600" height="600" aria-hidden="true"></canvas>
+      </div>
+
       <div class="hero-card">
-        <span class="badge">Freelance • APIs • Automatisation • Bug fixing</span>
-        <h1>Code pragmatique, livré vite.<br/>Sharp as a fox 🦊</h1>
-        <p class="lead">Je conçois des <strong>APIs</strong>, j’automatise des <strong>process</strong>, et je corrige vos <strong>bugs</strong> avec une approche simple, testée et maintenable.</p>
-        <a class="cta" href="mailto:contact@goupil.dev?subject=[Goupil.dev] Demande de devis">Demander un devis</a>
-        <p style="margin-top:10px;color:#b5bdd1">Réponse sous 24h ouvrées • Paris / Remote</p>
+        <span class="badge">Freelance • APIs • Automation • Bug fixing</span>
+        <h1>Pragmatic code, shipped fast.<br/>Sharp as a fox 🦊</h1>
+        <p class="lead">I design <strong>APIs</strong>, automate <strong>workflows</strong>, and fix <strong>bugs</strong> with a simple, tested, and maintainable approach.</p>
+        <a class="cta" href="mailto:contact@goupil.dev?subject=[Goupil.dev] Quote request">Get a quote</a>
+        <p style="margin-top:10px;color:#b5bdd1">Replies within 1 business day • Paris • Remote</p>
       </div>
       <div class="hero-visual">
-        <img src="assets/logo.png" alt="Logo renard low-poly" />
+        <img src="assets/logo.png" alt="Low‑poly fox logo" />
       </div>
     </section>
 
@@ -42,43 +46,43 @@
       <h2>Services</h2>
       <div class="cards">
         <div class="card">
-          <h3>Bug fixing rapide</h3>
-          <p>Audit ciblé, reproduction, correctif et explication — pour repartir proprement. Stack : Java, JS/TS, APIs REST.</p>
+          <h3>Rapid bug fixing</h3>
+          <p>Focused reproduction, patch, and explanation — to unblock safely. Stacks: Java, JS/TS, REST APIs.</p>
         </div>
         <div class="card">
-          <h3>Automatisation & scripts</h3>
-          <p>Traitement de fichiers (CSV/Excel), intégrations API, scraping légal, tâches CRON. Livré documenté + exemples.</p>
+          <h3>Automation & scripts</h3>
+          <p>File processing (CSV/Excel), API integrations, lawful scraping, scheduled jobs. Delivered with docs & examples.</p>
         </div>
         <div class="card">
-          <h3>Mini APIs & intégrations</h3>
-          <p>Conception de micro‑services et intégrations (Stripe, Mail, Maps…). Tests inclus, déploiement guidé.</p>
+          <h3>Mini APIs & integrations</h3>
+          <p>Micro‑services and vendor integrations (Stripe, email, Maps…). Tests included, guided deployment.</p>
         </div>
       </div>
     </section>
 
     <section id="process" class="section">
-      <h2>Méthode</h2>
+      <h2>Process</h2>
       <div class="card">
-        <p>Brief → chiffrage simple → itérations courtes → livrable testé → récap clair.</p>
-        <blockquote>“Pas de blabla : des specs concrètes, des tests, et un code que vous pouvez reprendre.”</blockquote>
+        <p>Brief → clear scope & quote → short iterations → tested deliverable → concise handover.</p>
+        <blockquote>“No fluff: concrete specs, tests, and code you can own.”</blockquote>
       </div>
     </section>
 
     <section id="contact" class="section">
       <h2>Contact</h2>
       <div class="card">
-        <p>Un besoin ? Écrivez-moi : <a href="mailto:contact@goupil.dev">contact@goupil.dev</a></p>
-        <p>GitHub : <a href="https://github.com/goupil-dev" target="_blank" rel="noopener">github.com/goupil-dev</a></p>
+        <p>Have a project in mind? Email me at <a href="mailto:contact@goupil.dev">contact@goupil.dev</a></p>
+        <p>GitHub: <a href="https://github.com/goupil-dev" target="_blank" rel="noopener">github.com/goupil-dev</a></p>
       </div>
     </section>
 
     <footer class="footer">
       <div class="left">
-        <img src="assets/favicon.png" alt="Goupil icône" />
+        <img src="assets/favicon.png" alt="Goupil icon" />
         <span>© <span id="yr"></span> goupil.dev — Paris • Remote</span>
       </div>
       <div>
-        <a href="mailto:contact@goupil.dev" class="cta" style="padding:8px 12px;">Me contacter</a>
+        <a href="mailto:contact@goupil.dev" class="cta" style="padding:8px 12px;">Contact</a>
       </div>
     </footer>
   </div>
