@@ -1,0 +1,56 @@
+name: Bump CSS cache version
+
+on:
+  push:
+    paths:
+      - 'styles.css'       # ↴
+      - 'assets/styles.css' # bump when CSS changes
+  workflow_dispatch: {}
+
+permissions:
+  contents: write  # allow the workflow to push back to the repo
+
+jobs:
+  bump:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+        with:
+          ref: ${{ github.ref }}
+
+      - name: Generate version string (UTC timestamp)
+        id: ver
+        run: echo "VERSION=$(date -u +%Y%m%d%H%M%S)" >> "$GITHUB_OUTPUT"
+
+      - name: Update index.html query string
+        shell: bash
+        run: |
+          set -euo pipefail
+          VERSION="${{ steps.ver.outputs.VERSION }}"
+          HTMLS=(index.html)
+          # Optional: update all html files; uncomment next line if needed
+          # mapfile -t HTMLS < <(git ls-files "**/*.html")
+
+          for f in "${HTMLS[@]}"; do
+            if [[ -f "$f" ]]; then
+              # Replace href to styles.css or assets/styles.css (with or without existing ?v=...)
+              perl -0777 -i -pe "s/(href=\s*['\"])styles\\.css(?:\?v=[^'\"\\s>]*)?(['\"])/\${1}styles.css?v=${VERSION}\${2}/g; s/(href=\s*['\"])assets\/styles\\.css(?:\?v=[^'\"\\s>]*)?(['\"])/\${1}assets\/styles.css?v=${VERSION}\${2}/g" "$f"
+            fi
+          done
+
+          # Only commit if something actually changed
+          if git diff --quiet; then
+            echo "No changes to commit"
+            exit 0
+          fi
+
+      - name: Commit & push
+        if: ${{ !cancelled() }}
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "github-actions[bot]@users.noreply.github.com"
+          git add index.html || true
+          git add **/*.html || true
+          git commit -m "chore: bump CSS cache version to ${{ steps.ver.outputs.VERSION }}"
+          git push
